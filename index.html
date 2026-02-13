@@ -166,7 +166,7 @@
     .price .big{font-family:"Libre Baskerville", serif; font-size: 34px; color:var(--navy);}
     .fineprint{font-size: 13px; opacity:.82; line-height:1.5}
 
-    /* Reviews background: points to ./reviews-bg.png if you add it */
+    /* OPTIONAL: only works if you add ./reviews-bg.png to repo root */
     .review-wrap{
       background:
         linear-gradient(180deg, rgba(15,27,45,.55), rgba(15,27,45,.45)),
@@ -287,7 +287,7 @@
             <div class="note">
               <div>⭐</div>
               <div>
-                <b>Tip:</b> Add your best ceremony photo here. It boosts conversions fast.
+                <b>Tip:</b> Put your best ceremony photo here.
                 <div class="muted">Image file: <code>hero.png</code></div>
               </div>
             </div>
@@ -392,68 +392,6 @@
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section id="process">
-      <div class="container">
-        <div class="section-title">
-          <h2>How Booking Works</h2>
-          <div class="muted">Simple steps • Clear communication</div>
-        </div>
-
-        <div class="grid-3">
-          <div class="card pad">
-            <b style="color:var(--navy);">1) Reach out</b>
-            <div class="muted" style="margin-top:6px;">Tell me your date, location, and the kind of service you want.</div>
-          </div>
-          <div class="card pad">
-            <b style="color:var(--navy);">2) Confirm details</b>
-            <div class="muted" style="margin-top:6px;">We’ll align on ceremony style, timing, and any special requests.</div>
-          </div>
-          <div class="card pad">
-            <b style="color:var(--navy);">3) Ceremony day</b>
-            <div class="muted" style="margin-top:6px;">A warm, dignified service delivered with care and confidence.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="book">
-      <div class="container">
-        <div class="section-title">
-          <h2>Pricing & Travel</h2>
-          <div class="muted">Transparent and straightforward</div>
-        </div>
-
-        <div class="grid-2">
-          <div class="card pad">
-            <div class="price">
-              <div class="big">$50</div>
-              <div class="muted">Service fee</div>
-            </div>
-            <p class="fineprint">
-              Payment method listed as <b>“Other.”</b> (You can clarify accepted options on your contact form or during booking.)
-              Travel range listed as <b>45 miles</b> from Parma, Ohio.
-            </p>
-            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
-              <a class="btn btn-primary" href="#contact">Check availability</a>
-              <a class="btn btn-secondary" href="#contact">Ask a question</a>
-            </div>
-          </div>
-
-          <div class="card pad">
-            <b style="color:var(--navy);">Service Area</b>
-            <p class="fineprint" style="margin-top:8px;">
-              Based in <b>Parma, OH</b>, serving a <b>45-mile radius</b>. If your location is outside that range,
-              still reach out—exceptions may be possible depending on date/time.
-            </p>
-            <div class="badge">📍 Parma, Ohio</div>
-            <div class="badge" style="margin-top:8px;">🚗 45-mile travel range</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- REVIEWS -->
     <section id="reviews">
       <div class="container">
@@ -489,36 +427,7 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <div class="section-title">
-          <h2>FAQ</h2>
-          <div class="muted">Quick answers to common questions</div>
-        </div>
-
-        <div class="grid-2">
-          <div class="card pad">
-            <b style="color:var(--navy);">How far do you travel?</b>
-            <div class="muted" style="margin-top:6px;">Up to 45 miles from Parma, OH (per listing). Reach out if you’re slightly outside.</div>
-          </div>
-          <div class="card pad">
-            <b style="color:var(--navy);">What services do you provide?</b>
-            <div class="muted" style="margin-top:6px;">Marriages, vow renewals, baptisms, funerals, christenings, and house blessings.</div>
-          </div>
-          <div class="card pad">
-            <b style="color:var(--navy);">What is your fee?</b>
-            <div class="muted" style="margin-top:6px;">Listed service fee is $50. Confirm details when you reach out.</div>
-          </div>
-          <div class="card pad">
-            <b style="color:var(--navy);">How do I book?</b>
-            <div class="muted" style="margin-top:6px;">Use the contact form below to check availability and share your date/location.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
+    <!-- CONTACT (unchanged) -->
     <section id="contact">
       <div class="container">
         <div class="section-title">
@@ -590,12 +499,11 @@
     <div class="footer">
       <div class="container">
         <div><b>Note:</b> This is a demo landing page built from public profile details.</div>
-        <div style="marginnton-top:6px;">© <span id="year"></span> Don Bower • Parma, Ohio</div>
+        <div style="margin-top:6px;">© <span id="year"></span> Don Bower • Parma, Ohio</div>
       </div>
     </div>
   </main>
 
-  <!-- Mobile CTA Bar -->
   <div class="mobile-cta" aria-label="Mobile call-to-action bar">
     <a class="btn btn-primary" href="#contact">Contact Me</a>
     <a class="btn btn-secondary" href="#book">Book</a>
@@ -617,7 +525,6 @@
         `Name: ${name}\nEmail: ${email}\nDate: ${date}\nLocation: ${location}\n\nMessage:\n${message}\n`
       );
 
-      // Replace this with a real form endpoint later (Formspree, Netlify Forms, etc.)
       window.location.href = `mailto:YOUR_EMAIL_HERE@example.com?subject=${subject}&body=${body}`;
     }
   </script>
