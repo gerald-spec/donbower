@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Don Bower | Wedding Officiant in Parma, OH</title>
+  <meta name="description" content="Don Bower is an ordained minister serving Parma, Ohio and a 45-mile radius. Weddings, vow renewals, baptisms, funerals, christenings, and house blessings. 30 years experience. $50 service fee." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --navy:#0F1B2D;
+      --slate:#304A6E;
+      --ivory:#F6F2EA;
+      --charcoal:#1F2937;
+      --gold:#B08D57;
+
+      --bg: var(--ivory);
+      --text: var(--charcoal);
+      --card:#FFFFFF;
+      --border: rgba(31,41,55,.12);
+      --shadow: 0 12px 32px rgba(15,27,45,.10);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg) 45%, #ffffff 100%);
+    }
+    a{color:inherit}
+    .container{max-width:var(--max); margin:0 auto; padding: 0 18px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 12px 16px; border-radius: 999px;
+      font-weight:600; text-decoration:none; border:1px solid transparent;
+      transition: transform .08s ease, box-shadow .2s ease, background .2s ease;
+      cursor:pointer; white-space:nowrap;
+    }
+    .btn:active{transform: translateY(1px)}
+    .btn-primary{background:var(--navy); color:#fff; box-shadow: 0 10px 22px rgba(15,27,45,.22);}
+    .btn-primary:hover{background:#0b1523}
+    .btn-secondary{background:#fff; color:var(--navy); border-color: rgba(15,27,45,.18);}
+    .btn-secondary:hover{border-color: rgba(15,27,45,.35)}
+    .badge{
+      display:inline-flex; gap:8px; align-items:center;
+      padding: 8px 12px; border:1px solid var(--border);
+      border-radius:999px; background: rgba(255,255,255,.7);
+      font-weight:600; font-size: 13px;
+    }
+
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(246,242,234,.75);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(31,41,55,.08);
+    }
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 12px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+      line-height:1.1;
+    }
+    .brand strong{
+      font-family: "Libre Baskerville", serif;
+      font-size: 16px;
+      color:var(--navy);
+    }
+    .brand span{font-size: 13px; opacity:.8}
+
+    .hero{
+      padding: 34px 0 18px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+      align-items:stretch;
+    }
+    .hero h1{
+      font-family:"Libre Baskerville", serif;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height:1.1;
+      margin: 0 0 12px;
+      color:var(--navy);
+      letter-spacing:-.2px;
+    }
+    .sub{
+      font-size: 16px;
+      line-height:1.6;
+      margin: 0 0 16px;
+      max-width: 60ch;
+    }
+    .hero-cta{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 14px 0 16px;}
+    .trust-row{display:flex; flex-wrap:wrap; gap:10px; margin-top: 10px;}
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-media{
+      overflow:hidden;
+      position:relative;
+      min-height: 320px;
+    }
+    .hero-media .img{
+      width:100%; height:100%;
+      background:
+        linear-gradient(180deg, rgba(15,27,45,.25), rgba(15,27,45,.15)),
+        url("assets/hero.jpg");
+      background-size: cover;
+      background-position: center;
+      min-height: 320px;
+    }
+    .hero-media .note{
+      position:absolute; bottom:12px; left:12px; right:12px;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(31,41,55,.10);
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-size: 13px;
+      display:flex; gap:10px; align-items:flex-start;
+    }
+    .hero-media .note b{color:var(--navy)}
+    .gold{color:var(--gold)}
+
+    section{padding: 26px 0;}
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:12px; margin-bottom: 12px;
+    }
+    h2{
+      font-family:"Libre Baskerville", serif;
+      margin: 0;
+      font-size: 24px;
+      color:var(--navy);
+    }
+    .muted{opacity:.8}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px;}
+    .grid-2{display:grid; grid-template-columns: repeat(2, 1fr); gap: 14px;}
+    .pad{padding: 16px;}
+    .kpi{display:flex; flex-direction:column; gap:6px}
+    .kpi b{font-size: 18px; color:var(--navy)}
+    .kpi span{font-size: 13px; opacity:.8}
+    ul.clean{margin: 10px 0 0; padding-left: 18px}
+    ul.clean li{margin: 7px 0; line-height:1.45}
+    .pill{
+      display:inline-flex; padding: 8px 10px; border-radius: 999px;
+      background: rgba(176,141,87,.10);
+      border: 1px solid rgba(176,141,87,.20);
+      font-weight:700;
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    .price{
+      display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+    }
+    .price .big{
+      font-family:"Libre Baskerville", serif;
+      font-size: 34px; color:var(--navy);
+    }
+    .fineprint{font-size: 13px; opacity:.82; line-height:1.5}
+
+    .review-wrap{
+      background:
+        linear-gradient(180deg, rgba(15,27,45,.55), rgba(15,27,45,.45)),
+        url("assets/reviews-bg.jpg");
+      background-size: cover;
+      background-position:center;
+      border-radius: var(--radius);
+      border: 1px solid rgba(31,41,55,.12);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      color:#fff;
+    }
+    .review-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px;}
+    .review{
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 16px;
+      padding: 14px;
+      min-height: 150px;
+    }
+    .review p{margin:0 0 10px; line-height:1.55}
+    .review small{opacity:.9}
+
+    form{
+      display:grid; gap: 10px;
+    }
+    label{font-weight:600; font-size: 13px}
+    input, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(31,41,55,.18);
+      font: inherit;
+      background:#fff;
+      outline:none;
+    }
+    textarea{min-height: 120px; resize: vertical}
+    .form-row{display:grid; grid-template-columns: 1fr 1fr; gap: 10px;}
+    .footer{
+      padding: 26px 0 40px;
+      border-top: 1px solid rgba(31,41,55,.08);
+      font-size: 13px;
+      opacity:.85;
+    }
+
+    /* Mobile CTA bar */
+    .mobile-cta{
+      position:fixed;
+      left: 10px; right: 10px; bottom: 10px;
+      z-index: 60;
+      display:none;
+      gap: 10px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(31,41,55,.12);
+      border-radius: 16px;
+      padding: 10px;
+      box-shadow: 0 18px 40px rgba(15,27,45,.18);
+      backdrop-filter: blur(10px);
+    }
+    .mobile-cta a{flex:1}
+
+    @media (max-width: 960px){
+      .hero-grid{grid-template-columns: 1fr; }
+      .hero-media{min-height: 260px}
+      .grid-3{grid-template-columns: 1fr}
+      .grid-2{grid-template-columns: 1fr}
+      .review-grid{grid-template-columns: 1fr}
+      .form-row{grid-template-columns: 1fr}
+      .mobile-cta{display:flex;}
+      header .topbar .actions{display:none;}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Don Bower</strong>
+          <span>Ordained Minister • Parma, Ohio • 45-mile travel range</span>
+        </div>
+        <div class="actions" style="display:flex; gap:10px; align-items:center;">
+          <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          <a class="btn btn-primary" href="#book">Book My Services</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="pill">30 years experience • Methodist</div>
+            <h1>Warm, Professional Wedding Ceremonies — Personalized for Your Story</h1>
+            <p class="sub">
+              I’m <b>Don Bower</b>, an ordained minister in <b>Parma, Ohio</b> serving couples within a <b>45-mile radius</b>.
+              With <b>over thirty years</b> of ministry experience, I bring a steady, caring presence and help you create
+              a ceremony that feels meaningful, dignified, and truly <i>you</i>.
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#contact">Contact Me</a>
+              <a class="btn btn-secondary" href="#book">Book My Services</a>
+              <span class="badge"><span class="gold">●</span> Typical fee: <b>$50</b></span>
+            </div>
+
+            <div class="trust-row">
+              <span class="badge">📍 Parma, OH</span>
+              <span class="badge">🚗 Travel: 45 miles</span>
+              <span class="badge">💒 Weddings + vow renewals</span>
+              <span class="badge">🕊️ Baptisms • Funerals • Blessings</span>
+            </div>
+          </div>
+
+          <div class="card hero-media" aria-label="Hero image">
+            <div class="img" role="img" aria-label="Wedding ceremony image"></div>
+            <div class="note">
+              <div>⭐</div>
+              <div>
+                <b>Tip:</b> Add your best ceremony photo here. It boosts conversions fast.
+                <div class="muted">Image file: <code>assets/hero.jpg</code></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;" class="grid-3">
+          <div class="card pad kpi">
+            <b>$50 Service Fee</b>
+            <span>Simple, transparent pricing.</span>
+          </div>
+          <div class="card pad kpi">
+            <b>30 Years Experience</b>
+            <span>Serving congregations in many capacities.</span>
+          </div>
+          <div class="card pad kpi">
+            <b>Love & Hope Focus</b>
+            <span>Messages that uplift and encourage.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Don</h2>
+          <div class="muted">Methodist • Parma, Ohio</div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card pad">
+            <p style="margin-top:0; line-height:1.7;">
+              <b>Over thirty years</b> experience serving congregations in all capacities.
+              I also do outreach ministries to nursing homes and skilled care facilities.
+              I bring messages of <b>love and hope</b>, stressing the life our Heavenly Father has for us.
+            </p>
+            <div class="badge" style="margin-top:10px;">🏡 Address: 11803 Stormes Dr., Parma, OH 44130</div>
+          </div>
+
+          <div class="card" style="overflow:hidden;">
+            <div style="
+              height: 100%;
+              min-height: 260px;
+              background:
+                linear-gradient(180deg, rgba(15,27,45,.18), rgba(15,27,45,.10)),
+                url('assets/about.jpg');
+              background-size: cover;
+              background-position: center;
+            " role="img" aria-label="Portrait of Don"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Services Offered</h2>
+          <div class="muted">Available within ~45 miles of Parma</div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card pad">
+            <b style="color:var(--navy);">Weddings</b>
+            <ul class="clean">
+              <li>Marriages</li>
+              <li>Renewal of vows</li>
+              <li>Ceremony script guidance</li>
+            </ul>
+          </div>
+          <div class="card pad">
+            <b style="color:var(--navy);">Faith & Family</b>
+            <ul class="clean">
+              <li>Baptisms</li>
+              <li>Christenings</li>
+              <li>House blessings</li>
+            </ul>
+          </div>
+          <div class="card pad">
+            <b style="color:var(--navy);">Pastoral Care</b>
+            <ul class="clean">
+              <li>Funerals</li>
+              <li>Comforting, hope-filled messages</li>
+              <li>Respectful, dignified service</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="overflow:hidden; margin-top:14px;">
+          <div style="
+            min-height: 220px;
+            background:
+              linear-gradient(180deg, rgba(15,27,45,.20), rgba(15,27,45,.12)),
+              url('assets/services.jpg');
+            background-size: cover;
+            background-position: center;
+          " role="img" aria-label="Wedding detail image"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="container">
+        <div class="section-title">
+          <h2>How Booking Works</h2>
+          <div class="muted">Simple steps • Clear communication</div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card pad">
+            <b style="color:var(--navy);">1) Reach out</b>
+            <div class="muted" style="margin-top:6px;">Tell me your date, location, and the kind of service you want.</div>
+          </div>
+          <div class="card pad">
+            <b style="color:var(--navy);">2) Confirm details</b>
+            <div class="muted" style="margin-top:6px;">We’ll align on ceremony style, timing, and any special requests.</div>
+          </div>
+          <div class="card pad">
+            <b style="color:var(--navy);">3) Ceremony day</b>
+            <div class="muted" style="margin-top:6px;">A warm, dignified service delivered with care and confidence.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="book">
+      <div class="container">
+        <div class="section-title">
+          <h2>Pricing & Travel</h2>
+          <div class="muted">Transparent and straightforward</div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card pad">
+            <div class="price">
+              <div class="big">$50</div>
+              <div class="muted">Service fee</div>
+            </div>
+            <p class="fineprint">
+              Payment method listed as <b>“Other.”</b> (You can clarify accepted options on your contact form or during booking.)
+              Travel range listed as <b>45 miles</b> from Parma, Ohio.
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+              <a class="btn btn-primary" href="#contact">Check availability</a>
+              <a class="btn btn-secondary" href="#contact">Ask a question</a>
+            </div>
+          </div>
+
+          <div class="card pad">
+            <b style="color:var(--navy);">Service Area</b>
+            <p class="fineprint" style="margin-top:8px;">
+              Based in <b>Parma, OH</b>, serving a <b>45-mile radius</b>. If your location is outside that range,
+              still reach out—exceptions may be possible depending on date/time.
+            </p>
+            <div class="badge">📍 Parma, Ohio</div>
+            <div class="badge" style="margin-top:8px;">🚗 45-mile travel range</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews">
+      <div class="container">
+        <div class="section-title">
+          <h2>Reviews</h2>
+          <div class="muted">Replace these with real testimonials when available</div>
+        </div>
+
+        <div class="review-wrap">
+          <div style="font-family:'Libre Baskerville',serif; font-size:20px;">
+            “A calm, confident presence that made our day feel meaningful.”
+          </div>
+
+          <div class="review-grid">
+            <div class="review">
+              <p>“Don helped us feel at ease from the first message. The ceremony was warm, respectful, and perfectly paced.”</p>
+              <small>— Placeholder Couple • Parma, OH</small>
+            </div>
+            <div class="review">
+              <p>“Professional and kind. He honored our wishes and delivered a message filled with hope.”</p>
+              <small>— Placeholder Family • Northeast Ohio</small>
+            </div>
+            <div class="review">
+              <p>“Clear communication, simple process, and a beautiful service. Highly recommended.”</p>
+              <small>— Placeholder Couple • Cleveland Area</small>
+            </div>
+          </div>
+
+          <div style="margin-top:10px; font-size:13px; opacity:.9;">
+            Background image file: <code>assets/reviews-bg.jpg</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-title">
+          <h2>FAQ</h2>
+          <div class="muted">Quick answers to common questions</div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card pad">
+            <b style="color:var(--navy);">How far do you travel?</b>
+            <div class="muted" style="margin-top:6px;">Up to 45 miles from Parma, OH (per listing). Reach out if you’re slightly outside.</div>
+          </div>
+          <div class="card pad">
+            <b style="color:var(--navy);">What services do you provide?</b>
+            <div class="muted" style="margin-top:6px;">Marriages, vow renewals, baptisms, funerals, christenings, and house blessings.</div>
+          </div>
+          <div class="card pad">
+            <b style="color:var(--navy);">What is your fee?</b>
+            <div class="muted" style="margin-top:6px;">Listed service fee is $50. Confirm details when you reach out.</div>
+          </div>
+          <div class="card pad">
+            <b style="color:var(--navy);">How do I book?</b>
+            <div class="muted" style="margin-top:6px;">Use the contact form below to check availability and share your date/location.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Don</h2>
+          <div class="muted">Fastest way to check availability</div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card pad">
+            <form onsubmit="handleSubmit(event)">
+              <div class="form-row">
+                <div>
+                  <label for="name">Your Name</label>
+                  <input id="name" name="name" placeholder="Jane & Michael" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="you@email.com" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="date">Date</label>
+                  <input id="date" name="date" placeholder="MM/DD/YYYY" />
+                </div>
+                <div>
+                  <label for="location">Location / Venue</label>
+                  <input id="location" name="location" placeholder="City + venue name" />
+                </div>
+              </div>
+
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me what you’re looking for (wedding, vow renewal, baptism, etc.) and any special requests." required></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <div class="fineprint">
+                This demo form can be wired to email, a CRM, or a booking tool. (Right now it opens your email client.)
+              </div>
+            </form>
+          </div>
+
+          <div class="card pad">
+            <b style="color:var(--navy);">Contact details</b>
+            <p class="fineprint" style="margin-top:8px;">
+              <b>Don Bower</b><br/>
+              Parma, Ohio<br/>
+              Address on listing: 11803 Stormes Dr., Parma, OH 44130
+            </p>
+
+            <div class="badge">💼 Experience: 30 years</div><br/>
+            <div class="badge" style="margin-top:8px;">💵 Service fee: $50</div><br/>
+            <div class="badge" style="margin-top:8px;">🧾 Payments: “Other”</div>
+
+            <hr style="border:none; border-top:1px solid rgba(31,41,55,.10); margin:14px 0;" />
+
+            <b style="color:var(--navy);">Booking button</b>
+            <p class="fineprint" style="margin-top:8px;">
+              Replace the link below with your preferred booking method (Calendly, Square Appointments, etc.).
+            </p>
+            <a class="btn btn-secondary" href="https://YOUR-BOOKING-LINK-HERE.com" target="_blank" rel="noopener">Book My Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="container">
+        <div><b>Note:</b> This is a demo landing page built from public profile details.</div>
+        <div style="margin-top:6px;">© <span id="year"></span> Don Bower • Parma, Ohio</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Mobile CTA Bar -->
+  <div class="mobile-cta" aria-label="Mobile call-to-action bar">
+    <a class="btn btn-primary" href="#contact">Contact Me</a>
+    <a class="btn btn-secondary" href="#book">Book</a>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const date = document.getElementById("date").value.trim();
+      const location = document.getElementById("location").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const subject = encodeURIComponent("Booking inquiry for officiant services");
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nDate: ${date}\nLocation: ${location}\n\nMessage:\n${message}\n`
+      );
+
+      // Replace this with a real form endpoint later (Formspree, Netlify Forms, etc.)
+      window.location.href = `mailto:YOUR_EMAIL_HERE@example.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
